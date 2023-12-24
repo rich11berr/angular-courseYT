@@ -1,0 +1,30 @@
+.object-list {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  gap: 40px;
+
+  flex-wrap: nowrap;
+
+  &__item {
+    width: 28%;
+    height: 150px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}

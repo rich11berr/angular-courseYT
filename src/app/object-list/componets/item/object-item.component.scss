@@ -1,0 +1,17 @@
+.object {
+  width: 50%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  span {
+    font-size: 15px;
+  }
+}
