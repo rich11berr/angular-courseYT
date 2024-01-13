@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './pipes.component.scss'
 })
 export class PipesComponent {
+  // DatePipe
+  // UpperCase
+  // LowerCase
+  // CurrencyPipe
+  // DecimalPipe
+  // PercentPipe
 
+  public name: string = 'dazhe i ne strayus';
+  public surname: string = 'DEVEloper';
+
+  public date = new Date().toDateString();
 }

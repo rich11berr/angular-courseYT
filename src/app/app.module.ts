@@ -11,7 +11,7 @@ import { MyNavigation } from './components/navigation/navigation.component';
   declarations: [
     AppComponent,
     MyNavigation,
-    MyEmptyPage
+    MyEmptyPage,
   ],
   imports: [
     BrowserModule,

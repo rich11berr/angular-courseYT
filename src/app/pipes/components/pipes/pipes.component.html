@@ -1,1 +1,11 @@
-<p>pipes works!</p>
+<span>{{ name | uppercase | myCustom }}</span>
+<br />
+<span>{{ surname | lowercase | myCustom }}</span>
+<br />
+<span>{{ date | date }}</span>
+<br />
+<span>{{ date | date : "medium" }}</span>
+<br />
+<span>{{ date | date : "shortTime" }}</span>
+<br />
+<span>{{ date | date : "MMM dd, yyyy 'at' hh:mm a" }}</span>
