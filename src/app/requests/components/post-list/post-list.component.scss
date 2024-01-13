@@ -1,0 +1,21 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin-top: 2rem;
+
+  width: 40vw;
+  border: 2px solid black;
+  padding: 2rem;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__content {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

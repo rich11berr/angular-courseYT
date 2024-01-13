@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./lifecycle/life-cycle.module').then((m) => m.LifeCycleModule)
   },
   {
+    path: 'requests',
+    loadChildren: () => import('./requests/request-module.module').then((m) => m.RequestModule)
+  },
+  {
     path: '**',
     component: MyEmptyPage,
   }

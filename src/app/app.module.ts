@@ -16,7 +16,7 @@ import { MyNavigation } from './components/navigation/navigation.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MyCalculatorModule
+    MyCalculatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
