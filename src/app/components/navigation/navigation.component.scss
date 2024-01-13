@@ -1,0 +1,29 @@
+ul {
+  display: flex;
+  gap: 18px;
+  list-style-type: none;
+
+  li {
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    a {
+      font-size: 20px;
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+    }
+
+    div {
+      width: 1px;
+      height: 20px;
+      background-color: black;
+    }
+  }
+}
