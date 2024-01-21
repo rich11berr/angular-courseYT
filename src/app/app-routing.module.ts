@@ -32,6 +32,10 @@ const routes: Routes = [
     loadChildren: () => import('./pipes/pipes.module').then((m) => m.PipeModule)
   },
   {
+    path: 'forms',
+    loadChildren: () => import('./forms/forms.module').then((m) => m.FormsModule)
+  },
+  {
     path: '**',
     component: MyEmptyPage,
   }

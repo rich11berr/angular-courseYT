@@ -1,0 +1,20 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  justify-content: center;
+
+  width: 50vw;
+
+  div {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+
+    label {
+      width: 80px;
+    }
+  }
+}
