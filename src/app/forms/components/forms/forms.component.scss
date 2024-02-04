@@ -24,4 +24,10 @@
       width: 160px;
     }
   }
+
+  &__array {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }

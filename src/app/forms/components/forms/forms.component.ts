@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 export function checkRegExp(regExp: RegExp): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -21,11 +21,16 @@ export const conformPassword: ValidatorFn = (
 })
 export class FormsComponent implements OnInit {
 
+  constructor(private _fb: FormBuilder) { }
+
+  public get skills(): FormArray {
+    return this.fbForm.get('skills') as FormArray
+  }
+
   public myForm = new FormGroup({
     login: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
-
   })
 
   public validatorsForm = new FormGroup({
@@ -35,6 +40,11 @@ export class FormsComponent implements OnInit {
   },
     conformPassword
   );
+
+  public fbForm = this._fb.group({
+    name: ['Vasya'],
+    skills: this._fb.array([]),
+  })
 
 
   public ngOnInit(): void {
@@ -47,6 +57,25 @@ export class FormsComponent implements OnInit {
     } else {
       alert('Форма не валидна')
     }
+  }
+
+  public newSkill(): FormGroup {
+    return this._fb.group({
+      skill: '',
+      expirience: '',
+    })
+  }
+
+  public addSkill(): void {
+    this.skills.push(this.newSkill())
+  }
+
+  public removeSkill(i: number): void {
+    this.skills.removeAt(i);
+  }
+
+  public onSubmit() {
+    console.log(this.fbForm.value);
   }
 
 

@@ -48,3 +48,26 @@
   </div>
   }
 </div>
+
+<form class="login-form" [formGroup]="fbForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" />
+  </div>
+
+  <div formArrayName="skills" class="login-form__array">
+    @for (skill of skills.controls; track skill; let i = $index) {
+    <div [formGroupName]="i">
+      <label [for]="i + 'skill'">{{ i + 1 }} | Skill</label>
+      <input [id]="i + 'skill'" type="text" formControlName="skill" />
+      <label [for]="i + 'exp'">Expirience</label>
+      <input [id]="i + 'exp'" type="text" formControlName="expirience" />
+      <button (click)="removeSkill(i)">Delete</button>
+    </div>
+
+    }
+  </div>
+
+  <div><button (click)="addSkill()">Add skill</button></div>
+  <button type="submit">Submit</button>
+</form>
