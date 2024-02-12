@@ -14,12 +14,24 @@ export const conformPassword: ValidatorFn = (
   return control.value.password_one === control.value.password_two ? null : { PasswordDoNotMatch: true };
 }
 
+interface TemplateFormI {
+  login: string,
+  email: string,
+  password: string,
+}
+
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
   styleUrl: './forms.component.scss'
 })
 export class FormsComponent implements OnInit {
+
+  public templateForm: TemplateFormI = {
+    login: 'Borya',
+    email: '',
+    password: '',
+  }
 
   constructor(private _fb: FormBuilder) { }
 

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsComponent } from './components/forms/forms.component';
 import { FormsRouting } from './forms-routing.module';
 
@@ -14,6 +14,7 @@ import { FormsRouting } from './forms-routing.module';
     CommonModule,
     FormsRouting,
     ReactiveFormsModule,
+    FormsModule,
   ]
 })
-export class FormsModule { }
+export class FormsUIModule { }
