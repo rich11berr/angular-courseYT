@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { RateOptions } from '../rate/rate.component';
 
 export function checkRegExp(regExp: RegExp): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -57,6 +58,15 @@ export class FormsComponent implements OnInit {
     name: ['Vasya'],
     skills: this._fb.array([]),
   })
+
+  public customForm = this._fb.group({
+    rate: [4, [Validators.required]]
+  })
+
+  public ratesOptions: RateOptions = {
+    rates: 10,
+    text: 'Оцените наш курс по Angular',
+  }
 
 
   public ngOnInit(): void {

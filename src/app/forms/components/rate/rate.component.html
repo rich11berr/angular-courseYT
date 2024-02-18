@@ -1,0 +1,15 @@
+<div class="rate">
+  @if (options.text !== undefined) {
+  <p class="rate__text">{{ options.text }}</p>
+  }
+
+  <div class="rate__wrapper">
+    @for (el of ratesArr; track el; ) {
+    <div
+      class="rate__item"
+      (click)="onRate(el)"
+      [ngClass]="el <= currentRate ? 'rate__active' : ''"
+    ></div>
+    }
+  </div>
+</div>

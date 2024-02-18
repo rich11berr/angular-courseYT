@@ -94,3 +94,11 @@
     />
   </div>
 </div>
+
+<div class="login-form" [formGroup]="customForm">
+  <h2>Custom Control</h2>
+
+  <pre>{{ customForm.value | json }}</pre>
+
+  <app-rate formControlName="rate" [options]="ratesOptions"></app-rate>
+</div>
