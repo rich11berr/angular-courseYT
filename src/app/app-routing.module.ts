@@ -36,6 +36,10 @@ const routes: Routes = [
     loadChildren: () => import('./forms/forms.module').then((m) => m.FormsUIModule)
   },
   {
+    path: 'decorators',
+    loadChildren: () => import('./decorators/decorators.module').then((m) => m.DecoratorsModule)
+  },
+  {
     path: '**',
     component: MyEmptyPage,
   }
