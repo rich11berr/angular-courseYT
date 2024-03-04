@@ -23,3 +23,14 @@
   </ng-template>
   <button (click)="isShow = !isShow">Click me</button>
 </div>
+
+<div class="block">
+  <p #paragraph>Lorem Ipsum</p>
+  <ng-template #paragraphTemplate>
+    <p>Ipsum lorem</p>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="paragraphTemplate"></ng-container>
+
+  <app-child-decorator></app-child-decorator>
+  <app-child-decorator></app-child-decorator>
+</div>
