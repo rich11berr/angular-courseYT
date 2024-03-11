@@ -19,10 +19,10 @@ export class DecoratorsPageComponent implements AfterViewInit {
   @ViewChildren(ChildDecoratorComponent) childComponents?: QueryList<ChildDecoratorComponent>;
 
   public ngAfterViewInit(): void {
-    console.log(this.paragraph);
-    console.log(this.paragraphTemplate);
-    console.log(this.childComponent);
+    // console.log(this.paragraph);
+    // console.log(this.paragraphTemplate);
+    // console.log(this.childComponent);
 
-    console.log(this.childComponents)
+    // console.log(this.childComponents)
   }
 }
