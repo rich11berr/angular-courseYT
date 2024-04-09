@@ -9,15 +9,12 @@ export class DirectivesPageComponent {
 
   // ngFor
 
-  public colors: string[] = ['red', 'blue', 'green', 'yellow'];
 
   // ngIf
 
   public isShow = true;
 
   //ngSwitch
-
-  public currentColor: string = this.colors[0];
 
   // ngStyle
 
