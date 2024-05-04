@@ -40,6 +40,10 @@ const routes: Routes = [
     loadChildren: () => import('./decorators/decorators.module').then((m) => m.DecoratorsModule)
   },
   {
+    path: 'view-styles',
+    loadChildren: () => import('./view-styles/view-styles.module').then((m) => m.ViewStylesModule)
+  },
+  {
     path: '**',
     component: MyEmptyPage,
   }
