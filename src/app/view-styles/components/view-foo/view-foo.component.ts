@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { UserService } from '../../../user.service';
 
 @Component({
   selector: 'app-view-foo',
@@ -9,5 +10,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
   ],
 })
 export class ViewFooComponent {
+
+  constructor(private _userService: UserService) { }
+
+  public login(): void {
+    this._userService.login();
+  }
 
 }

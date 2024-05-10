@@ -31,6 +31,9 @@ enum CalcModifiers {
     styleUrls: ['./my-calculator.component.scss']
 })
 export class MyCalculatorComponent {
+
+    public canLeave = false;
+
     public calcOperations = CalcOperations;
 
     public calcModifiers = CalcModifiers;
