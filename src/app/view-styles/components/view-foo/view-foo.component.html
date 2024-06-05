@@ -1,3 +1,14 @@
+<div
+  [@fadeInOut]="isShow ? 'open' : 'close'"
+  style="font-size: 30px"
+  (@fadeInOut.start)="onAnimationStart($event)"
+  (@fadeInOut.done)="onAnimationDone($event)"
+>
+  I'm animated
+</div>
+
+<button style="font-size: 30px" (click)="isShow = !isShow">change show</button>
+
 @for (item of todoArr; track $index) {
 <app-todo-item [todo]="item"></app-todo-item>
 }
