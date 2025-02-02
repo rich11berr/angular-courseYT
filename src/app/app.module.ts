@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MyCalculatorModule } from './calculator/my-calculator.module';
 import { MyEmptyPage } from './components/empty-route/empty-route.component';
 import { MyNavigation } from './components/navigation/navigation.component';
+import { AppChildComponent } from './app-child/app-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyNavigation,
     MyEmptyPage,
+    AppChildComponent,
   ],
   imports: [
     BrowserAnimationsModule,

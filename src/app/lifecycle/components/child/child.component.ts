@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, DoCheck, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, DoCheck, EventEmitter, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, input } from '@angular/core';
 
 @Component({
     selector: 'app-child',
@@ -8,7 +8,7 @@ import { AfterContentInit, AfterViewInit, Component, DoCheck, EventEmitter, Inpu
 })
 export class ChildComponent implements OnInit, DoCheck, AfterContentInit, AfterViewInit, OnDestroy, OnChanges {
 
-  @Input() title!: string;
+  readonly title = input.required<string>();
 
   @Output() eventChange = new EventEmitter<string>()
 
@@ -25,7 +25,7 @@ export class ChildComponent implements OnInit, DoCheck, AfterContentInit, AfterV
 
   ngOnInit(): void {
     console.log('%cOnInit', 'color: blue');
-    this.tempTitle = this.title;
+    this.tempTitle = this.title();
   }
 
   ngDoCheck(): void {

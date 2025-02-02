@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { AbstractControl, ControlValueAccessor, NG_VALUE_ACCESSOR, ValidationErrors, Validator } from '@angular/forms';
 
 export interface RateOptions {
@@ -21,7 +21,7 @@ export interface RateOptions {
 })
 export class RateComponent implements ControlValueAccessor, OnInit {
 
-  @Input() options!: RateOptions;
+  readonly options = input.required<RateOptions>();
 
   public currentRate!: number;
 
@@ -79,7 +79,7 @@ export class RateComponent implements ControlValueAccessor, OnInit {
     let count = 1;
     while (cond) {
       this.ratesArr.push(count);
-      if (count === this.options.rates) {
+      if (count === this.options().rates) {
         cond = false;
       } else {
         count++;

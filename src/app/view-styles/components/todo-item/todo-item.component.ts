@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserService } from '../../../user.service';
 import { TodoItemI } from '../view-foo/view-foo.component';
@@ -12,7 +12,7 @@ import { TodoItemI } from '../view-foo/view-foo.component';
 })
 export class TodoItemComponent {
 
-  @Input('todo') todoItem!: TodoItemI;
+  readonly todoItem = input.required<TodoItemI>({ alias: "todo" });
 
   public subject$: Observable<string>;
 
@@ -26,7 +26,7 @@ export class TodoItemComponent {
   }
 
   public changeInsideText(): void {
-    this.todoItem.text = 'changed from inside'
+    this.todoItem().text = 'changed from inside'
   }
 
 }
