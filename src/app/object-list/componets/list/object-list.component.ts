@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
     selector: 'my-object-list',
     templateUrl: './object-list.component.html',
     styleUrl: './object-list.component.scss',
+    standalone: false
 })
 
 export class MyObjectListComponent {

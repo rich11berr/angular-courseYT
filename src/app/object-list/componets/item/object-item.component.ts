@@ -7,7 +7,8 @@ import { MyObject, myObjects } from '../list/object-list.component';
 @Component({
     selector: 'my-object-item',
     templateUrl: './object-item.component.html',
-    styleUrl: './object-item.component.scss'
+    styleUrl: './object-item.component.scss',
+    standalone: false
 })
 
 export class MyObjectItemComponent implements OnInit {

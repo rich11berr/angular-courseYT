@@ -1,7 +1,8 @@
 import { Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[myIf]'
+    selector: '[myIf]',
+    standalone: false
 })
 export class MyIfDirectiveDirective implements OnInit {
 

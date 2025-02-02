@@ -4,10 +4,11 @@ import { UserService } from '../../../user.service';
 import { TodoItemI } from '../view-foo/view-foo.component';
 
 @Component({
-  selector: 'app-todo-item',
-  templateUrl: './todo-item.component.html',
-  styleUrl: './todo-item.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-todo-item',
+    templateUrl: './todo-item.component.html',
+    styleUrl: './todo-item.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class TodoItemComponent {
 

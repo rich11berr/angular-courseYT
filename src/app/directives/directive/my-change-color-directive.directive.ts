@@ -1,7 +1,8 @@
 import { AfterViewInit, Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[myChangeColor]'
+    selector: '[myChangeColor]',
+    standalone: false
 })
 export class MyChangeColorDirectiveDirective implements AfterViewInit {
 

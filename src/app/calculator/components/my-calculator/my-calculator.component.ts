@@ -28,7 +28,8 @@ enum CalcModifiers {
 @Component({
     selector: 'app-my-calculator',
     templateUrl: './my-calculator.component.html',
-    styleUrls: ['./my-calculator.component.scss']
+    styleUrls: ['./my-calculator.component.scss'],
+    standalone: false
 })
 export class MyCalculatorComponent {
 

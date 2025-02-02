@@ -2,9 +2,10 @@ import { AfterViewInit, Component, ElementRef, QueryList, TemplateRef, ViewChild
 import { ChildDecoratorComponent } from '../child-decorator/child-decorator.component';
 
 @Component({
-  selector: 'app-decorators-page',
-  templateUrl: './decorators-page.component.html',
-  styleUrl: './decorators-page.component.scss'
+    selector: 'app-decorators-page',
+    templateUrl: './decorators-page.component.html',
+    styleUrl: './decorators-page.component.scss',
+    standalone: false
 })
 export class DecoratorsPageComponent implements AfterViewInit {
 

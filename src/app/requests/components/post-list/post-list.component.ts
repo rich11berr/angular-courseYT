@@ -3,9 +3,10 @@ import { Observable, Subject } from 'rxjs';
 import { Post, PostService } from '../../services/post.service';
 
 @Component({
-  selector: 'app-post-list',
-  templateUrl: './post-list.component.html',
-  styleUrl: './post-list.component.scss'
+    selector: 'app-post-list',
+    templateUrl: './post-list.component.html',
+    styleUrl: './post-list.component.scss',
+    standalone: false
 })
 export class PostListComponent implements OnInit {
 

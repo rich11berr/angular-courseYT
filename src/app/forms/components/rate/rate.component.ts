@@ -7,16 +7,17 @@ export interface RateOptions {
 }
 
 @Component({
-  selector: 'app-rate',
-  templateUrl: './rate.component.html',
-  styleUrl: './rate.component.scss',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      multi: true,
-      useExisting: RateComponent
-    }
-  ]
+    selector: 'app-rate',
+    templateUrl: './rate.component.html',
+    styleUrl: './rate.component.scss',
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            multi: true,
+            useExisting: RateComponent
+        }
+    ],
+    standalone: false
 })
 export class RateComponent implements ControlValueAccessor, OnInit {
 

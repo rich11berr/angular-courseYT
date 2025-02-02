@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-view-bar',
-  templateUrl: './view-bar.component.html',
-  styleUrl: './view-bar.component.scss'
+    selector: 'app-view-bar',
+    templateUrl: './view-bar.component.html',
+    styleUrl: './view-bar.component.scss',
+    standalone: false
 })
 export class ViewBarComponent {
 

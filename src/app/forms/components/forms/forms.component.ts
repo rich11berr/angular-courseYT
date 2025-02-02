@@ -22,9 +22,10 @@ interface TemplateFormI {
 }
 
 @Component({
-  selector: 'app-forms',
-  templateUrl: './forms.component.html',
-  styleUrl: './forms.component.scss'
+    selector: 'app-forms',
+    templateUrl: './forms.component.html',
+    styleUrl: './forms.component.scss',
+    standalone: false
 })
 export class FormsComponent implements OnInit {
 
