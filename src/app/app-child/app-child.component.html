@@ -1,3 +1,11 @@
-<h2>Parent Value: {{ value() }}</h2>
+<!-- <h2>Parent Value: {{ value() }}</h2>
 
-<button (click)="increment()">Increment</button>
+<button (click)="increment()">Increment</button> -->
+
+<h1>Addresses: {{ shippingAddresses() | json }}</h1>
+
+<h2>Selected address: {{ selectedOption() }}</h2>
+
+<button (click)="changeAddresses()">Change gps</button>
+
+<button (click)="changeShippingAddress(2)">Change address</button>
